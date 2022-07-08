@@ -1,0 +1,49 @@
+:root {
+  --slider-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  /* outline: 2px solid red; */
+  width: var(--slider-width);
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliders {
+  /* 크기 = width x 이미지 장수 */
+  width: calc(var(--slider-width) * 3);
+  /* outline: 4px solid blue; */
+  display: flex;
+  /* 이미지 위치 변경 */
+  transform: translateX(0);
+
+  /* 트랜지션 */
+  transition-duration: 0.4s;
+}
+
+.slider .counter {
+  position: absolute;
+  color: #fff;
+  bottom: 40px;
+  right: 40px;
+  font-size: 32px;
+  display: flex;
+}
+
+.slider .counter span {
+  margin: 0 4px;
+}
